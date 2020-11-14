@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    transition: all 0.5s ease;
+}
+:root {
+    --primary: #586BA4;
+    --secondary: #324376;
+
+    --completed: #324376a2;
+    
+    --font: #F5DD90;
+
+    color: var(--font);
+    font-family: monospace;
+}
+.container {
+    height: 100vh;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.center {
+    color: var(--font);
+    text-align: center;
+    font-size: 3vw;
+    position: relative;
+    top: 80px;
+}
+.input-form {
+    margin-top: 150px;
+    display: flex;
+}
+.input-form input {
+    height: 50px;
+    width: 290px;
+    background: var(--secondary);
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 20px;
+    color: var(--font)
+}
+.input-form button {
+    height: 50px;
+    width: 50px;
+    color: var(--secondary);
+    background: var(--font);
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-family: monospace;
+}
+.list-items {
+    margin-top: 100px;
+}
+.list-items ul li {
+    background: var(--secondary);
+    padding-left: 20px;
+    display: flex;
+    font-size: 20px;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.list-items ul li .items-div {
+    display: flex;
+}
+.list-items i {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--font);
+    color: var(--primary)
+}
+.opacity {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.animate {
+    animation: closed 0.5s ease-in-out 0.5 forwards;
+}
+.display-none {
+    display: none;
+}
+#none {
+    display: none;
+}
+
+
+@keyframes closed {
+    0% {
+        opacity: 0.5
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .center {
+        font-size: 10vw;
+        top: 20px;
+    }
+    .input-form {
+        margin-top: 100px;
+    }
+}
